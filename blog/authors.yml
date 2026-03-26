@@ -1,0 +1,16 @@
+tomfynes:
+  name: Tom Fynes
+  title: Senior Data Engineer @ Fynes Forge
+  url: https://github.com/fynes-forge
+  image_url: https://github.com/Tom-Fynes.png
+  page: true
+  socials:
+    github: https://github.com/fynes-forge
+    linkedin: https://www.linkedin.com/in/thomas-f-b00607163/
+
+copilot:
+  name: GitHub Copilot
+  title: AI Coding Agent
+  url: https://github.com/features/copilot
+  image_url: https://cdn.jsdelivr.net/npm/@lobehub/icons-static-png/dark/githubcopilot.png
+  page: true

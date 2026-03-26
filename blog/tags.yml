@@ -1,0 +1,44 @@
+sql:
+  label: sql
+  permalink: /sql
+  description: Tag used for SQL related posts
+
+python:
+  label: Python
+  permalink: /python
+  description: Tag used for Python related posts
+
+misc:
+  label: misc
+  permalink: /misc
+  description: Tag used for posts that don't fit in any other category
+
+cloud:
+  label: Cloud
+  permalink: /cloud
+  description: Tag used for Cloud related posts, Azure, AWS, GCP, etc.
+
+data-engineering:
+  label: Data Engineering
+  permalink: /data-engineering
+  description: Tag used for Data Engineering related posts, ETL, data pipelines, beginners
+
+database:
+  label: Database
+  permalink: /database
+  description: Tag used for Database related posts, design, optimization, indexing, etc.
+
+data-modeling:
+  label: Data Modeling
+  permalink: /data-modeling
+  description: Tag used for Data Modeling related posts, normalization, schema design, etc.
+
+web-dev:
+  label: Web Dev
+  permalink: /web-dev
+  description: Tag used for web development related posts, frontend, frameworks, tooling, etc.
+
+ai:
+  label: AI
+  permalink: /ai
+  description: Tag used for AI related posts, agents, LLMs, automation, etc.

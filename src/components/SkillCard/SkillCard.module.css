@@ -1,0 +1,149 @@
+/* SkillCard — based on Uiverse.io by Smit-Prajapati, adapted to site theme */
+
+.card {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* ── Gradient background ── */
+.background {
+  position: absolute;
+  inset: 0;
+}
+
+/* ── Centred logo that moves to bottom-right on hover ── */
+.logo {
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, 50%);
+  transition: all 0.6s ease-in-out, opacity 0.4s ease-in-out;
+  z-index: 10;
+  opacity: 1;
+}
+
+.logoImg {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
+}
+
+/* ── Frosted-glass panel ── */
+.box {
+  position: absolute;
+  padding: 16px 56px 40px 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.55);
+  border-top: 2px solid rgb(255, 255, 255);
+  border-right: 1px solid white;
+  border-radius: 10% 13% 42% 0% / 10% 12% 75% 0%;
+  box-shadow: rgba(100, 100, 111, 0.364) -7px 7px 29px 0px;
+  transform-origin: bottom left;
+  transition: all 1s ease-in-out;
+  /* single large panel */
+  width: 85%;
+  height: 85%;
+  bottom: -85%;
+  left: -85%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* ── Hover: scale card up, slide panel in, move logo ── */
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card:hover .box {
+  bottom: -1px;
+  left: -1px;
+}
+
+.card:hover .logo {
+  transform: translate(0, 0);
+  bottom: 16px;
+  right: 16px;
+  opacity: 0;
+}
+
+/* ── Text content inside panel ── */
+.title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 6px 0;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.4);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.description {
+  font-size: 11.5px;
+  color: #2c2c3e;
+  margin: 0;
+  line-height: 1.55;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+}
+
+/* ── Dark mode overrides ── */
+html[data-theme='dark'] .card {
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 7px 29px 0px;
+}
+
+html[data-theme='dark'] .box {
+  background: rgba(20, 20, 35, 0.72);
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.5) -7px 7px 29px 0px;
+}
+
+html[data-theme='dark'] .title {
+  color: #f0f0ff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+html[data-theme='dark'] .description {
+  color: rgba(220, 220, 255, 0.85);
+}
+
+/* ── Text badge (used when no distinct icon exists) ── */
+.textBadge {
+  font-size: 20px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.95);
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px 12px;
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* ── Responsive flex grid wrapper ── */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+}
+

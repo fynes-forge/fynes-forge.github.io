@@ -1,0 +1,80 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ *
+ * Only keyframe animations that cannot be achieved with Tailwind alone
+ * are defined here.
+ */
+
+/* ── Gradient mesh background ─────────────────────────────────────── */
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.heroBg {
+  background: linear-gradient(
+    -45deg,
+    #0f0f1a,
+    #1a0a2e,
+    #0a1522,
+    #1a0a2e,
+    #0f0c1a
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+/* ── Rotating conic-gradient border ───────────────────────────────── */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes conicSpin {
+  to { --angle: 360deg; }
+}
+
+.conicRing {
+  background: conic-gradient(
+    from var(--angle),
+    #dd7596,
+    #b7c3f3,
+    #aed6f1,
+    #ecda90,
+    #dd7596
+  );
+  animation: conicSpin 4s linear infinite;
+  border-radius: 9999px;
+  padding: 3px;
+  display: inline-flex;
+}
+
+/* ── Pulsing accent glow ──────────────────────────────────────────── */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow:
+      0 0 20px 4px rgba(221, 117, 150, 0.5),
+      0 0 40px 8px rgba(221, 117, 150, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 0 35px 10px rgba(221, 117, 150, 0.75),
+      0 0 70px 20px rgba(221, 117, 150, 0.3);
+  }
+}
+
+.profileGlow {
+  border-radius: 9999px;
+  animation: glowPulse 3s ease-in-out infinite;
+  display: inline-flex;
+}
+
+/* ── Shared utility ───────────────────────────────────────────────── */
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

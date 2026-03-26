@@ -1,0 +1,201 @@
+/* Pipelines gallery page — updated design system */
+
+/* ── Hero banner ── */
+.heroBanner {
+  padding: 5rem 1.5rem 4rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(221, 117, 150, 0.15);
+}
+
+.heroTitle {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  margin: 0 0 0.75rem;
+  background: linear-gradient(135deg, #DD7596, #8716f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heroSubtitle {
+  font-size: 1.05rem;
+  opacity: 0.7;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.accentDivider {
+  width: 4rem;
+  height: 3px;
+  margin: 1.25rem auto;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #DD7596, #8716f1);
+}
+
+/* ── Stat row ── */
+.statRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.statPill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: rgba(221, 117, 150, 0.12);
+  border: 1px solid rgba(221, 117, 150, 0.3);
+  color: var(--ifm-color-primary);
+}
+
+.statDot {
+  color: var(--ifm-color-emphasis-400);
+  font-size: 1rem;
+}
+
+/* ── Card grid — 2 columns on desktop ── */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Legacy single-column container (kept for any existing use) ── */
+.sectionsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ── Card link wrapper ── */
+.cardLink {
+  text-decoration: none !important;
+  color: inherit;
+  display: block;
+}
+
+/* ── Individual pipeline card ── */
+.card {
+  border-radius: 1rem;
+  overflow: hidden;
+  background: var(--ifm-background-color);
+  border: 1px solid rgba(100, 100, 111, 0.15);
+  border-top: 3px solid var(--accent-color, #DD7596);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  cursor: pointer;
+}
+
+/* ── Card header row ── */
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cardTitleGroup {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  min-width: 0;
+}
+
+.cardEmoji {
+  font-size: 2rem;
+  flex-shrink: 0;
+  line-height: 1;
+  margin-top: 2px;
+  padding: 0.35rem;
+  border-radius: 0.6rem;
+  background: rgba(221, 117, 150, 0.1);
+}
+
+.cardTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+}
+
+.cardDescription {
+  font-size: 0.85rem;
+  margin: 0;
+  opacity: 0.7;
+  line-height: 1.6;
+}
+
+/* ── Complexity badge ── */
+.complexityBadge {
+  flex-shrink: 0;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  margin-top: 2px;
+  white-space: nowrap;
+}
+
+/* ── Tech stack chips ── */
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.techChip {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: rgba(183, 195, 243, 0.15);
+  border: 1px solid rgba(183, 195, 243, 0.35);
+  color: var(--ifm-color-primary-lighter, #B7C3F3);
+  white-space: nowrap;
+}
+
+/* ── CTA row ── */
+.cta {
+  padding-top: 0.25rem;
+}
+
+.ctaText {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+}
+
+/* ── Dark mode adjustments ── */
+html[data-theme="dark"] .card {
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme="dark"] .techChip {
+  background: rgba(183, 195, 243, 0.1);
+  border-color: rgba(183, 195, 243, 0.2);
+}
+
+html[data-theme="dark"] .cardEmoji {
+  background: rgba(221, 117, 150, 0.15);
+}
