@@ -2,7 +2,6 @@ import React, { useState, useEffect, useMemo } from "react";
 import Link from "@docusaurus/Link";
 import { useLocation } from "@docusaurus/router";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
-import { useDocById } from "@docusaurus/plugin-content-docs/client";
 
 /* ─────────────── helpers ─────────────── */
 
@@ -32,7 +31,7 @@ function countTotalLinks(items) {
 function countVisitedLinks(items) {
   return items.reduce((acc, item) => {
     if (item.type === "link" || item.type === "doc") {
-      const href = item.href ?? item.to ?? "";
+      const href = item.href || item.to || "";
       try {
         return acc + (localStorage.getItem("tfynes_visited_" + href) === "true" ? 1 : 0);
       } catch {
@@ -106,11 +105,7 @@ function CourseHeader({ sidebar }) {
 function SidebarLink({ item, depth = 0 }) {
   const location = useLocation();
   const prefersReducedMotion = useReducedMotion();
-  // For "doc" type items, resolve the href from docId via Docusaurus's
-  // useDocById hook — this is how the default sidebar resolves links.
-  const docData = useDocById(item.docId ?? null);
-  const resolvedHref = item.href ?? item.to ?? docData?.path ?? "#";
-  const href = resolvedHref;
+  const href = item.href || item.to || "#";
   const active = isActiveItem(href, location.pathname);
   const [isVisited, setIsVisited] = useState(false);
 
@@ -290,16 +285,6 @@ function SidebarItems({ items, depth = 0 }) {
  */
 export default function DocSidebar({ sidebar, path, onCollapse, isHidden }) {
   const prefersReducedMotion = useReducedMotion();
-
-  // DEBUG — log sidebar structure to console so we can see what Docusaurus passes
-  React.useEffect(() => {
-    if (sidebar && sidebar.length > 0) {
-      console.log("[DocSidebar] item types:", sidebar.map(i => ({ type: i.type, label: i.label, hasItems: !!(i.items), itemCount: i.items?.length, href: i.href, docId: i.docId })));
-      if (sidebar[0]?.items) {
-        console.log("[DocSidebar] first category children:", sidebar[0].items.map(i => ({ type: i.type, label: i.label, href: i.href, docId: i.docId })));
-      }
-    }
-  }, [sidebar]);
 
   if (isHidden) return null;
 
