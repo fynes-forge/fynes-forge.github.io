@@ -1,27 +1,37 @@
 version: 2
 
 updates:
-  # ── Python dependencies ──────────────────────────────────────────────
-  - package-ecosystem: "pip"
+  # 1. Update NPM dependencies (Docusaurus core, Tailwind, Framer Motion, etc.)
+  - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "weekly"
       day: "monday"
-      time: "09:00"
-      timezone: "Europe/London"
     open-pull-requests-limit: 5
-    labels:
-      - "chore"
-      - "dependencies"
-    commit-message:
-      prefix: "chore(deps)"
+    # Grouping related updates to avoid PR noise
     groups:
-      dev-dependencies:
+      docusaurus-packages:
         patterns:
-          - "ruff"
-          - "mypy"
-          - "pytest*"
-          - "coverage*"
+          - "@docusaurus/*"
+      react-stack:
+        patterns:
+          - "react"
+          - "react-dom"
+      styling-tools:
+        patterns:
+          - "tailwindcss"
+          - "postcss"
+          - "autoprefixer"
+
+  # 2. Update GitHub Actions (Deployment workflows)
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 3
+
+  # 3. Security updates are always enabled by default,
+  # but this ensures they are prioritized.
 
   # ── GitHub Actions ───────────────────────────────────────────────────
   - package-ecosystem: "github-actions"

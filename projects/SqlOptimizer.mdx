@@ -1,0 +1,27 @@
+---
+id: sql-optimiser
+title: SQL Query Optimiser Sandbox
+sidebar_label: SQL Optimiser
+---
+
+import SqlQueryOptimizer from '@site/src/components/SQL/SqlQueryOptimiser';
+
+# SQL Query Optimization Playground
+
+Welcome to my interactive SQL Query Optimiser! This tool allows you to input SQL queries and receive basic optimization suggestions tailored to different database systems. While this is a client-side tool and doesn't execute actual queries, 
+it demonstrates common best practices and potential pitfalls for Data Engineers / Analysts.
+
+This project showcases my understanding of:
+- Database-specific query characteristics (PostgreSQL, MySQL, MSSQL, Trino, Snowflake, BigQuery).
+- Common SQL anti-patterns and performance blockers.
+- Frontend development with React for interactive tools.
+
+<SqlQueryOptimizer />
+
+---
+
+## How it works
+
+The optimiser uses pattern matching to identify common SQL constructs that might impact performance or indicate suboptimal design. The suggestions are based on generally accepted best practices for each selected database type.
+
+**Disclaimer:** This tool provides basic guidance and is not a substitute for analyzing actual query execution plans (e.g., `EXPLAIN ANALYZE` in PostgreSQL) on your specific database with real data.

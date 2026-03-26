@@ -1,0 +1,49 @@
+.node {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--node-border-color, #e2e8f0);
+  border-left: 4px solid var(--node-accent-color, #1565c0);
+  background: var(--node-bg-color, #ffffff);
+  min-width: 160px;
+  max-width: 200px;
+  cursor: pointer;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+  position: relative;
+}
+
+.node:hover {
+  transform: translateY(-1px);
+}
+
+.icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.textGroup {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 1px;
+}
+
+.label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--ifm-font-color-base);
+}
+
+.subtitle {
+  font-size: 0.68rem;
+  color: var(--ifm-color-emphasis-600);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

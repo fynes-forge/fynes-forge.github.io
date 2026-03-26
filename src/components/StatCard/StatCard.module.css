@@ -1,0 +1,42 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.5rem 1rem;
+  background: var(--ifm-background-color);
+  border: 1px solid rgba(221, 117, 150, 0.2);
+  border-top: 3px solid var(--ifm-color-primary);
+  border-radius: 1rem;
+  text-align: center;
+  cursor: default;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem;
+  border-radius: 0.6rem;
+  background: rgba(221, 117, 150, 0.12);
+  color: var(--ifm-color-primary);
+}
+
+.value {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+  background: linear-gradient(135deg, #DD7596, #8716f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.label {
+  font-size: 0.75rem;
+  color: var(--ifm-color-emphasis-700);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-weight: 600;
+}

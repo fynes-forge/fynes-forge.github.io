@@ -1,124 +1,83 @@
-# AGENTS.md
-
-> Context and conventions for AI coding agents (Copilot, Claude, Cursor, etc.) working in this repository.
-
----
-
 ## Organisation Context
 
-This repository belongs to **Fynes Forge** — the open source engineering organisation of Tom Fynes, Senior Data Engineer.
+This repository belongs to Fynes Forge — the open-source engineering organisation of Tom Fynes, Senior Data Engineer.
 
-- **GitHub:** https://github.com/fynes-forge
-- **Portfolio:** https://fynes-forge.github.io
-- **Primary focus:** Data engineering, Python tooling, documentation
+GitHub: https://github.com/fynes-forge
 
----
+Portfolio: https://fynes-forge.github.io
+
+Design Philosophy: Industrial, high-contrast, high-performance, and educational.
 
 ## Project Purpose
 
-<!-- Replace this section when using the template -->
-Describe what this specific repo does in 2–3 sentences. Agents use this to understand the domain and make better suggestions.
+This repository hosts the Fynes Forge Technical Documentation and Course Platform. It serves as a central hub for engineering courses (SQL, Git, Python), project write-ups, and the "Forge Blog." It is built to be a living resource for data engineers.
 
----
 
-## Technology Stack
-
-### Primary
+## Stack
 
 | Layer | Technology |
 |---|---|
-| Language | Python 3.11+ |
-| Linting / formatting | Ruff |
-| Type checking | mypy |
-| Testing | pytest |
-| Package management | pip + `pyproject.toml` |
+| Framework | Docusaurus v3 |
+| Styling | Tailwind CSS v3 + custom CSS |
+| Fonts | Cinzel · Rajdhani · JetBrains Mono |
+| Animations | Framer Motion |
+| Diagrams | Mermaid |
+| Hosting | GitHub Pages |
 
-### Data (if applicable)
 
-| Tool | Purpose |
-|---|---|
-| Apache Airflow | Orchestration |
-| dbt | Transformation |
-| Snowflake / Trino | Warehousing / query engine |
-| Apache Spark | Large-scale processing |
+## Code & Content Conventions
 
----
+### Docusaurus & React
 
-## Code Conventions
+Styling: Use Tailwind CSS utility classes by default. Only use src/css/custom.css for design system variables (Fynes Forge colors/fonts).
 
-Agents should follow these conventions without being asked:
+Component Strategy: Check src/theme/ for "swizzled" components before creating new ones. Use @site/ aliases for imports.
 
-### Python
+Interactivity: Use Framer Motion for UI transitions. Keep components functional and use React hooks.
 
-- **Type hints are required** on all function signatures — no `Any` unless genuinely unavoidable
-- **Docstrings** on all public functions and classes — Google style
-- **Ruff** is the formatter and linter — do not suggest Black, Flake8, or isort
-- **No wildcard imports** — `from module import *` is never acceptable
-- **Prefer `pathlib.Path`** over `os.path` for file operations
-- **Prefer `dataclasses` or `pydantic`** over plain dicts for structured data
-- Functions should do one thing. If a function needs a long docstring to explain what it does, it should be split.
+Assets: Reference images from static/img/ using absolute paths (e.g., /img/diagram.png).
 
-### General
+### Documentation (Markdown/MDX)
+Course Logic: Respect the multi-instance structure. Content belongs in specific roots: /docs/ (SQL), /git_101/, /python_101/, /projects/.
 
-- **Conventional Commits** for all commit messages — `feat:`, `fix:`, `docs:`, `chore:` etc.
-- **No commented-out code** in PRs — delete it or put it behind a feature flag
-- **No print statements** in production code — use the `logging` module
-- **Environment variables** via `.env` + `python-dotenv` — never hardcode secrets
+Diagrams: Use Mermaid syntax within code blocks. Do not use static image exports for flowcharts.
 
----
+Callouts: Use Docusaurus admonitions (e.g., :::tip, :::danger).
 
-## Branch & PR Conventions
+Frontmatter: Every .md or .mdx file must have a title and description.
 
-- Default branch: `main`
-- Branch naming: `feat/<description>`, `fix/<description>`, `docs/<description>`, `chore/<description>`
-- PRs require: passing CI, filled-in PR template, reference to an issue where applicable
+## Structure
 
----
+```
+├── blog/           # The Forge Blog posts
+├── docs/           # SQL 101 course
+├── git_101/        # Git 101 course
+├── python_101/     # Python 101 course
+├── projects/       # Project write-ups
+├── src/
+│   ├── components/ # Custom React components (Framer Motion, etc.)
+│   ├── css/        # Global Fynes Forge design system
+│   ├── theme/      # Swizzled Docusaurus components
+│   └── pages/      # Landing pages & custom routes
+├── static/         # Static assets (images, PDFs)
+└── .github/        # Workflows & Copilot instructions
+```
 
 ## What Agents Should Avoid
 
-- ❌ Suggesting framework migrations or major dependency changes without being asked
-- ❌ Rewriting working code into a different style without a clear reason
-- ❌ Adding comments that restate what the code already clearly shows
-- ❌ Using `try/except Exception` as a catch-all without re-raising or specific handling
-- ❌ Generating placeholder TODO comments and leaving them in — complete the implementation or flag it explicitly
-- ❌ Ignoring type hints in generated code
+❌ Style Drift: Do not introduce CSS-in-JS libraries; stick to Tailwind + standard CSS.
 
----
+❌ Framework Downgrades: This is Docusaurus v3. Do not suggest v2-specific syntax or plugins.
 
-## Testing Standards
+❌ Hardcoding: Never hardcode course paths; use the defined directory structure for routing.
 
-- Tests live in `tests/` mirroring the `src/` structure
-- Test file naming: `test_<module_name>.py`
-- Use `pytest` fixtures — avoid repetitive setup in test functions
-- Aim for meaningful coverage of business logic — not 100% line coverage for its own sake
-- Data pipeline tests should use small, committed fixture datasets in `tests/fixtures/`
+❌ Verbose Comments: Don't explain what a useEffect hook does. Only comment on complex logic or design system specificities.
 
----
+❌ Unsafe Markdown: Ensure MDX components are properly imported before use in markdown files.
 
-## File Structure Reference
+## Deployment & CI/CD
+GitHub Pages: Deployment is handled via GitHub Actions.
 
-```
-src/
-├── __init__.py
-├── main.py          ← Entry point
-├── config.py        ← Config loading (env vars, settings)
-├── models/          ← Data models / schemas
-├── pipeline/        ← Pipeline logic (if data project)
-├── utils/           ← Shared utilities
-└── ...
+Commits: Use Conventional Commits (e.g., feat(ui): add new framer motion transition).
 
-tests/
-├── conftest.py      ← Shared fixtures
-├── fixtures/        ← Test data
-└── test_*.py        ← Test modules
-```
-
----
-
-## Security
-
-- Never suggest committing secrets, API keys, tokens, or passwords
-- All credentials must use environment variables
-- Dependency suggestions should be from well-maintained, widely-used packages
-- Flag any use of `eval()`, `exec()`, `subprocess` with shell=True, or `pickle` — these require explicit review
+Maintenance: Dependabot handles weekly NPM updates and monthly GitHub Action updates.
