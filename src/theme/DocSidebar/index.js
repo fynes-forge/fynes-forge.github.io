@@ -131,7 +131,7 @@ function SidebarLink({ item, depth = 0 }) {
       <Link
         to={href}
         className={
-          "block rounded-lg px-3 py-1.5 text-sm no-underline transition-colors duration-150 " +
+          "relative block rounded-lg px-3 py-1.5 text-sm no-underline transition-colors duration-150 " +
           (depth > 0 ? "ml-3 " : "") +
           (active
             ? "bg-[#DD7596]/20 text-[#CF1259] dark:text-[#DD7596] font-bold"
