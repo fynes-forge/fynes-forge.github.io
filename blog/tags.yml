@@ -42,3 +42,8 @@ ai:
   label: AI
   permalink: /ai
   description: Tag used for AI related posts, agents, LLMs, automation, etc.
+
+open-source:
+  label: Open Source 
+  permalink: /ai
+  description: Used for tagging blogs related to open source projects
