@@ -70,4 +70,5 @@ If you've been putting it off because it felt like unnecessary ceremony, I'd pus
 
 ---
 
-Fynes Forge is at [github.com/fynes-forge](https://github.com/fynes-forge) if you want to see how it looks in practice. The profile README and repo structure are all there. If you want to see the branding itself — colours, logo variants, typography, and UI elements — the full reference is at [fynes-forge.github.io/branding-pack-v2.html](https://fynes-forge.github.io/branding-pack-v2.html).
+Fynes Forge is at [github.com/fynes-forge](https://github.com/fynes-forge) if you want to see how it looks in practice. The profile README and repo structure are all there. If you want to see the branding itself — colours, logo variants, typography, and UI elements — the full reference can be seen [here](
+/branding-pack-v2.html).

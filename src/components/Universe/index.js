@@ -62,6 +62,16 @@ const milestones = [
   },
   {
     id: 6,
+    x: 770,
+    y: 86,
+    role: "Lead Data Engineer ",
+    company: "Jet2",
+    period: "2024–2024",
+    isCurrent: false,
+    r: 8,
+  },
+  {
+    id: 6,
     x: 820,
     y: 68,
     role: "Senior Data Engineer",
@@ -91,23 +101,23 @@ function extractStartYear(period) {
 
 /** Static star field — pre-defined to keep SSR safe (no Math.random on server). */
 const STARS = [
-  { cx: 45,  cy: 30,  r: 1.2, d: 0.0 },
-  { cx: 120, cy: 75,  r: 0.8, d: 0.5 },
-  { cx: 195, cy: 18,  r: 1.0, d: 1.2 },
-  { cx: 310, cy: 58,  r: 0.7, d: 0.3 },
-  { cx: 450, cy: 14,  r: 1.1, d: 1.8 },
-  { cx: 560, cy: 48,  r: 0.9, d: 0.8 },
-  { cx: 650, cy: 22,  r: 1.0, d: 2.1 },
-  { cx: 740, cy: 42,  r: 0.8, d: 0.1 },
-  { cx: 845, cy: 18,  r: 1.1, d: 1.5 },
-  { cx: 890, cy: 65,  r: 0.7, d: 0.9 },
-  { cx: 58,  cy: 148, r: 0.8, d: 2.3 },
+  { cx: 45, cy: 30, r: 1.2, d: 0.0 },
+  { cx: 120, cy: 75, r: 0.8, d: 0.5 },
+  { cx: 195, cy: 18, r: 1.0, d: 1.2 },
+  { cx: 310, cy: 58, r: 0.7, d: 0.3 },
+  { cx: 450, cy: 14, r: 1.1, d: 1.8 },
+  { cx: 560, cy: 48, r: 0.9, d: 0.8 },
+  { cx: 650, cy: 22, r: 1.0, d: 2.1 },
+  { cx: 740, cy: 42, r: 0.8, d: 0.1 },
+  { cx: 845, cy: 18, r: 1.1, d: 1.5 },
+  { cx: 890, cy: 65, r: 0.7, d: 0.9 },
+  { cx: 58, cy: 148, r: 0.8, d: 2.3 },
   { cx: 148, cy: 195, r: 1.0, d: 0.6 },
   { cx: 280, cy: 165, r: 0.9, d: 1.1 },
   { cx: 420, cy: 128, r: 0.7, d: 2.7 },
   { cx: 600, cy: 150, r: 1.1, d: 0.4 },
   { cx: 760, cy: 162, r: 0.8, d: 1.9 },
-  { cx: 30,  cy: 275, r: 0.7, d: 0.7 },
+  { cx: 30, cy: 275, r: 0.7, d: 0.7 },
   { cx: 165, cy: 425, r: 0.9, d: 1.6 },
   { cx: 350, cy: 440, r: 0.8, d: 2.4 },
   { cx: 495, cy: 410, r: 0.7, d: 0.2 },
@@ -117,8 +127,8 @@ const STARS = [
   { cx: 448, cy: 358, r: 0.7, d: 0.8 },
   { cx: 788, cy: 248, r: 0.8, d: 2.5 },
   { cx: 918, cy: 158, r: 0.6, d: 1.0 },
-  { cx: 328, cy: 98,  r: 0.7, d: 2.2 },
-  { cx: 708, cy: 82,  r: 0.8, d: 0.3 },
+  { cx: 328, cy: 98, r: 0.7, d: 2.2 },
+  { cx: 708, cy: 82, r: 0.8, d: 0.3 },
 ];
 
 /**
@@ -181,13 +191,13 @@ export default function Universe() {
             </feMerge>
           </filter>
           <linearGradient id="uni-path-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%"   stopColor={PERIWINKLE} stopOpacity="0.25" />
-            <stop offset="65%"  stopColor={PALE_BLUE}  stopOpacity="0.55" />
-            <stop offset="100%" stopColor={ACCENT}     stopOpacity="0.85" />
+            <stop offset="0%" stopColor={PERIWINKLE} stopOpacity="0.25" />
+            <stop offset="65%" stopColor={PALE_BLUE} stopOpacity="0.55" />
+            <stop offset="100%" stopColor={ACCENT} stopOpacity="0.85" />
           </linearGradient>
           <radialGradient id="uni-current-glow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%"   stopColor={ACCENT} stopOpacity="0.35" />
-            <stop offset="100%" stopColor={ACCENT} stopOpacity="0"    />
+            <stop offset="0%" stopColor={ACCENT} stopOpacity="0.35" />
+            <stop offset="100%" stopColor={ACCENT} stopOpacity="0" />
           </radialGradient>
         </defs>
 
@@ -373,9 +383,7 @@ export default function Universe() {
             className="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-3 rounded-xl text-sm pointer-events-none z-10"
             style={{
               background: "rgba(4, 4, 18, 0.95)",
-              border: `1px solid ${
-                hovered.isCurrent ? ACCENT : PERIWINKLE
-              }45`,
+              border: `1px solid ${hovered.isCurrent ? ACCENT : PERIWINKLE}45`,
               boxShadow: hovered.isCurrent
                 ? `0 0 24px ${ACCENT}30`
                 : `0 0 14px ${PERIWINKLE}18`,
