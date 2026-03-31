@@ -19,7 +19,7 @@ const ACCENT = "#DD7596";
 const PERIWINKLE = "#B7C3F3";
 const PALE_BLUE = "#AED6F1";
 const MAGENTA = "#ECDA90";
-const CONTACT_EMAIL = "tom.fynes@icloud.com";
+const CONTACT_EMAIL = "tf.dev@icloud.com";
 
 // ─── Data ──────────────────────────────────────────────────────────────────────
 
@@ -27,6 +27,7 @@ const FILTERS = [
   { id: "all", label: "All" },
   { id: "emis-optum", label: "EMIS / Optum" },
   { id: "data-shed", label: "The Data Shed" },
+  { id: "jet-2", label: "Jet2" },
 ];
 
 const workHistory = [
@@ -48,7 +49,7 @@ const workHistory = [
   },
   {
     id: 2,
-    company: "EMIS",
+    company: "Jet2",
     role: "Lead Data Engineer",
     period: "January 2024 – March 2024",
     badge: null,
@@ -164,14 +165,14 @@ const workHistory = [
 ];
 
 const KEY_SKILLS = [
-  { label: "Python",    color: ACCENT },
-  { label: "SQL",       color: PERIWINKLE },
-  { label: "Spark",     color: MAGENTA },
-  { label: "Airflow",   color: PALE_BLUE },
+  { label: "Python", color: ACCENT },
+  { label: "SQL", color: PERIWINKLE },
+  { label: "Spark", color: MAGENTA },
+  { label: "Airflow", color: PALE_BLUE },
   { label: "Snowflake", color: PERIWINKLE },
-  { label: "AWS",       color: MAGENTA },
-  { label: "Azure",     color: ACCENT },
-  { label: "dbt",       color: PALE_BLUE },
+  { label: "AWS", color: MAGENTA },
+  { label: "Azure", color: ACCENT },
+  { label: "dbt", color: PALE_BLUE },
 ];
 
 // ─── Sub-components ────────────────────────────────────────────────────────────
@@ -299,7 +300,11 @@ function WorkCard({ entry, isHovered }) {
       {/* Highlights */}
       <ul className="space-y-1.5 m-0 p-0 list-none">
         {entry.highlights.map((h, i) => (
-          <li key={i} className="flex items-start gap-2 text-sm" style={{ opacity: 0.8 }}>
+          <li
+            key={i}
+            className="flex items-start gap-2 text-sm"
+            style={{ opacity: 0.8 }}
+          >
             <span
               className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0"
               style={{ background: entry.companyColor }}
@@ -367,9 +372,9 @@ export default function Career() {
               <FadeInOnScroll direction="up" delay={500}>
                 <div className="flex justify-center gap-10 md:gap-20 flex-wrap">
                   {[
-                    { end: 8,  plus: true,  label: "Years Experience" },
-                    { end: 3,  plus: false, label: "Companies" },
-                    { end: 10, plus: true,  label: "Technologies" },
+                    { end: 8, plus: true, label: "Years Experience" },
+                    { end: 4, plus: false, label: "Companies" },
+                    { end: 10, plus: true, label: "Technologies" },
                   ].map(({ end, plus, label }) => (
                     <div key={label} className="text-center min-w-20">
                       <div
@@ -426,9 +431,7 @@ export default function Career() {
                       background:
                         filter === f.id ? `${ACCENT}20` : "transparent",
                       color:
-                        filter === f.id
-                          ? ACCENT
-                          : "var(--ifm-font-color-base)",
+                        filter === f.id ? ACCENT : "var(--ifm-font-color-base)",
                       borderColor:
                         filter === f.id
                           ? `${ACCENT}60`
@@ -520,7 +523,10 @@ export default function Career() {
                 >
                   Tech Snapshot
                 </h2>
-                <p className="text-base max-w-lg mx-auto" style={{ opacity: 0.6 }}>
+                <p
+                  className="text-base max-w-lg mx-auto"
+                  style={{ opacity: 0.6 }}
+                >
                   A quick glimpse of the core technologies in my toolkit.
                 </p>
               </div>
