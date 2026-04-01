@@ -153,7 +153,7 @@ const config = {
           items: [
             {
               label: "VS Code Theme",
-              href: "https://github.com/fynes-forge/nebula-nights",
+              href: "https://github.com/fynes-forge/forge-themes",
             },
             { label: "SQL Query Optimiser", to: "/projects/sql-optimiser" },
             { label: "Pipelines", to: "/pipelines" },
