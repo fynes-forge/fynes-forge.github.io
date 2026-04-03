@@ -18,9 +18,7 @@ import {
 } from "@site/src/components/animations";
 import styles from "./index.module.css";
 
-const Universe = React.lazy(() =>
-  import("@site/src/components/Universe")
-);
+const Universe = React.lazy(() => import("@site/src/components/Universe"));
 
 // ── Count-up stat helper ─────────────────────────────────────────────
 function CountUp({ end, suffix = "" }) {
@@ -78,7 +76,10 @@ function ScrollIndicator() {
         animate={prefersReducedMotion ? {} : { y: [0, 8, 0] }}
         transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
       >
-        <ChevronDown className="w-6 h-6" style={{ color: "rgba(255,255,255,0.5)" }} />
+        <ChevronDown
+          className="w-6 h-6"
+          style={{ color: "rgba(255,255,255,0.5)" }}
+        />
       </motion.div>
     </motion.div>
   );
@@ -118,7 +119,10 @@ export function HomepageHeader() {
         <FadeInOnScroll direction="down" delay={0}>
           <div className={styles.profileGlow}>
             <div className={styles.conicRing}>
-              <div className="rounded-full overflow-hidden bg-[#0f0f1a]" style={{ padding: 2 }}>
+              <div
+                className="rounded-full overflow-hidden bg-[#0f0f1a]"
+                style={{ padding: 2 }}
+              >
                 <img
                   src="img/profile.jpg"
                   alt="Avatar"
@@ -136,7 +140,8 @@ export function HomepageHeader() {
           <h1
             className="text-5xl md:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent"
             style={{
-              backgroundImage: "linear-gradient(135deg, #DD7596 0%, #B7C3F3 60%, #AED6F1 100%)",
+              backgroundImage:
+                "linear-gradient(135deg, #DD7596 0%, #B7C3F3 60%, #AED6F1 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
@@ -218,7 +223,7 @@ function QuickStatsBar() {
   const stats = [
     { value: 8, suffix: "+", label: "Years Experience" },
     { value: 10, suffix: "+", label: "Technologies" },
-    { value: 3, suffix: "", label: "Companies" },
+    { value: 4, suffix: "", label: "Companies" },
   ];
 
   return (
@@ -241,7 +246,10 @@ function QuickStatsBar() {
                 >
                   <CountUp end={s.value} suffix={s.suffix} />
                 </p>
-                <p className="text-sm mt-1" style={{ color: "rgba(183,195,243,0.75)" }}>
+                <p
+                  className="text-sm mt-1"
+                  style={{ color: "rgba(183,195,243,0.75)" }}
+                >
                   {s.label}
                 </p>
               </div>
@@ -331,9 +339,7 @@ function SkillsTeaser() {
         }}
       >
         <FadeInOnScroll direction="up" delay={0}>
-          <h2
-            className="text-2xl font-bold text-center mb-8"
-          >
+          <h2 className="text-2xl font-bold text-center mb-8">
             Key Technologies
           </h2>
         </FadeInOnScroll>
@@ -431,7 +437,7 @@ function FinalCTA() {
           </motion.a>
 
           <motion.a
-            href="mailto:tom.fynes@icloud.com"
+            href="mailto:tf.dev@icloud.com"
             className="px-8 py-3 rounded-xl font-bold text-base inline-block"
             style={{
               color: "#DD7596",
