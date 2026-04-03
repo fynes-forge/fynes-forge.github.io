@@ -1,4 +1,4 @@
-export const GITHUB_USERNAME = "Tom-Fynes";
+export const GITHUB_USERNAME = "fynes-forge";
 
 // TODO: Update this to your most starred repository name (e.g. "sql-101")
 export const FEATURED_REPO = "YOUR_MOST_STARRED_REPO";
