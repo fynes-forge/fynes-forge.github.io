@@ -1,0 +1,280 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1580" width="900" height="1580">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&amp;family=Rajdhani:wght@400;600;700&amp;family=JetBrains+Mono:wght@300;400;700&amp;display=swap');
+      .bg        { fill: #252E36; }
+      .card      { fill: #1C2329; }
+      .card-border { fill: none; stroke: #4F6272; stroke-width: 0.5; opacity: 0.4; }
+      .title     { font-family: 'Cinzel', serif; font-weight: 900; font-size: 36px; fill: #B7C3F3; letter-spacing: 0.1em; }
+      .subtitle  { font-family: 'JetBrains Mono', monospace; font-size: 11px; fill: #4F6272; letter-spacing: 0.4em; }
+      .section-heading { font-family: 'Cinzel', serif; font-weight: 700; font-size: 13px; fill: #DD7596; letter-spacing: 0.15em; }
+      .divider   { stroke: #4F6272; stroke-width: 0.5; opacity: 0.4; }
+      .divider-accent { stroke: #ECDA90; stroke-width: 1; opacity: 0.5; }
+      .cmd       { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; fill: #63C5EA; font-weight: 400; }
+      .desc      { font-family: 'Rajdhani', sans-serif; font-size: 12px; fill: #B7C3F3; font-weight: 400; letter-spacing: 0.03em; }
+      .kw        { fill: #DD7596; }
+      .fn        { fill: #63C5EA; }
+      .str       { fill: #83AFDF; }
+      .gold      { fill: #ECDA90; }
+      .footer    { font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #4F6272; letter-spacing: 0.2em; }
+      .section-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; fill: #4F6272; letter-spacing: 0.35em; }
+    </style>
+    <!-- Gold left-border gradient for cards -->
+    <linearGradient id="goldAccent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ECDA90" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ECDA90" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="multiLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#D05786"/>
+      <stop offset="50%" stop-color="#63C5EA"/>
+      <stop offset="100%" stop-color="#9F7EBE"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="1580" class="bg"/>
+
+  <!-- Top accent line -->
+  <rect x="0" y="0" width="900" height="3" fill="url(#multiLine)"/>
+
+  <!-- Logo mark (top left) -->
+  <g transform="translate(40, 26) scale(0.52)">
+    <rect x="8" y="8" width="70" height="70" rx="4" fill="#2A343F"/>
+    <rect x="18" y="18" width="9" height="50" fill="#B7C3F3"/>
+    <rect x="18" y="18" width="50" height="9" fill="#B7C3F3"/>
+    <rect x="18" y="38" width="37" height="7" fill="#ECDA90"/>
+    <polygon points="59,18 68,18 68,27" fill="#DD7596"/>
+    <polygon points="59,18 68,27 59,27" fill="#2A343F"/>
+    <rect x="18" y="68" width="50" height="2" fill="#63C5EA" opacity="0.55"/>
+    <rect x="66" y="29" width="2" height="39" fill="#9F7EBE" opacity="0.45"/>
+    <rect x="8"  y="8"  width="7" height="2" fill="#ECDA90"/>
+    <rect x="8"  y="8"  width="2" height="7" fill="#ECDA90"/>
+    <rect x="71" y="76" width="7" height="2" fill="#DD7596"/>
+    <rect x="75" y="72" width="2" height="6" fill="#DD7596"/>
+  </g>
+
+  <!-- Wordmark beside logo -->
+  <text x="84" y="51" font-family="Cinzel, serif" font-weight="900" font-size="16" fill="#B7C3F3" letter-spacing="4">FYNES</text>
+  <text x="84" y="63" font-family="Cinzel, serif" font-weight="400" font-size="7" fill="#ECDA90" letter-spacing="6">FORGE</text>
+
+  <!-- Header separator -->
+  <line x1="40" y1="80" x2="860" y2="80" class="divider"/>
+
+  <!-- Title block -->
+  <text x="450" y="130" text-anchor="middle" class="title">SQL</text>
+  <text x="450" y="152" text-anchor="middle" class="subtitle">CHEAT SHEET</text>
+  <line x1="180" y1="166" x2="370" y2="166" class="divider"/>
+  <line x1="530" y1="166" x2="720" y2="166" class="divider"/>
+  <rect x="371" y="163" width="158" height="2" fill="#ECDA90" opacity="0.4"/>
+
+  <!-- ══ DQL SECTION ══ -->
+  <text x="40" y="202" class="section-heading">DATA QUERY LANGUAGE (DQL)</text>
+  <line x1="40" y1="210" x2="860" y2="210" class="divider-accent"/>
+
+  <!-- Row 1 -->
+  <!-- Card 1 -->
+  <rect x="40" y="220" width="390" height="58" rx="2" class="card"/>
+  <rect x="40" y="220" width="3" height="58" rx="1" fill="url(#goldAccent)"/>
+  <rect x="40" y="220" width="390" height="58" rx="2" class="card-border"/>
+  <text x="54" y="239" class="cmd"><tspan class="kw">SELECT</tspan><tspan> col1, col2 </tspan><tspan class="kw">FROM</tspan><tspan> table_name</tspan></text>
+  <text x="54" y="255" class="desc">Retrieves data from one or more columns in a table.</text>
+
+  <!-- Card 2 -->
+  <rect x="450" y="220" width="410" height="58" rx="2" class="card"/>
+  <rect x="450" y="220" width="3" height="58" rx="1" fill="url(#goldAccent)"/>
+  <rect x="450" y="220" width="410" height="58" rx="2" class="card-border"/>
+  <text x="464" y="239" class="cmd"><tspan class="kw">SELECT</tspan><tspan> * </tspan><tspan class="kw">FROM</tspan><tspan> table_name</tspan></text>
+  <text x="464" y="255" class="desc">Retrieves all columns from a table.</text>
+
+  <!-- Row 2 -->
+  <rect x="40" y="288" width="390" height="58" rx="2" class="card"/>
+  <rect x="40" y="288" width="3" height="58" rx="1" fill="url(#goldAccent)"/>
+  <rect x="40" y="288" width="390" height="58" rx="2" class="card-border"/>
+  <text x="54" y="307" class="cmd"><tspan class="kw">SELECT DISTINCT</tspan><tspan> col </tspan><tspan class="kw">FROM</tspan><tspan> table</tspan></text>
+  <text x="54" y="323" class="desc">Retrieves unique values from a specified column.</text>
+
+  <rect x="450" y="288" width="410" height="58" rx="2" class="card"/>
+  <rect x="450" y="288" width="3" height="58" rx="1" fill="url(#goldAccent)"/>
+  <rect x="450" y="288" width="410" height="58" rx="2" class="card-border"/>
+  <text x="464" y="307" class="cmd"><tspan class="kw">SELECT</tspan><tspan> * </tspan><tspan class="kw">FROM</tspan><tspan> t </tspan><tspan class="kw">WHERE</tspan><tspan> condition</tspan></text>
+  <text x="464" y="323" class="desc">Filters records based on a specified condition.</text>
+
+  <!-- Row 3 -->
+  <rect x="40" y="356" width="390" height="58" rx="2" class="card"/>
+  <rect x="40" y="356" width="3" height="58" rx="1" fill="url(#goldAccent)"/>
+  <rect x="40" y="356" width="390" height="58" rx="2" class="card-border"/>
+  <text x="54" y="375" class="cmd"><tspan class="kw">SELECT</tspan><tspan> * </tspan><tspan class="kw">FROM</tspan><tspan> t </tspan><tspan class="kw">ORDER BY</tspan><tspan> col </tspan><tspan class="kw">ASC</tspan></text>
+  <text x="54" y="391" class="desc">Sorts the result set in ascending or descending order.</text>
+
+  <rect x="450" y="356" width="410" height="58" rx="2" class="card"/>
+  <rect x="450" y="356" width="3" height="58" rx="1" fill="url(#goldAccent)"/>
+  <rect x="450" y="356" width="410" height="58" rx="2" class="card-border"/>
+  <text x="464" y="375" class="cmd"><tspan class="kw">SELECT COUNT</tspan><tspan>(col) </tspan><tspan class="kw">FROM</tspan><tspan> table</tspan></text>
+  <text x="464" y="391" class="desc">Returns the number of rows matching a criterion.</text>
+
+  <!-- Row 4 -->
+  <rect x="40" y="424" width="390" height="58" rx="2" class="card"/>
+  <rect x="40" y="424" width="3" height="58" rx="1" fill="url(#goldAccent)"/>
+  <rect x="40" y="424" width="390" height="58" rx="2" class="card-border"/>
+  <text x="54" y="443" class="cmd"><tspan class="kw">SELECT SUM</tspan><tspan>(col) </tspan><tspan class="kw">FROM</tspan><tspan> table</tspan></text>
+  <text x="54" y="459" class="desc">Calculates the sum of a numeric column.</text>
+
+  <rect x="450" y="424" width="410" height="58" rx="2" class="card"/>
+  <rect x="450" y="424" width="3" height="58" rx="1" fill="url(#goldAccent)"/>
+  <rect x="450" y="424" width="410" height="58" rx="2" class="card-border"/>
+  <text x="464" y="443" class="cmd"><tspan class="kw">SELECT AVG</tspan><tspan>(col) </tspan><tspan class="kw">FROM</tspan><tspan> table</tspan></text>
+  <text x="464" y="459" class="desc">Calculates the average value of a numeric column.</text>
+
+  <!-- Row 5 -->
+  <rect x="40" y="492" width="390" height="58" rx="2" class="card"/>
+  <rect x="40" y="492" width="3" height="58" rx="1" fill="url(#goldAccent)"/>
+  <rect x="40" y="492" width="390" height="58" rx="2" class="card-border"/>
+  <text x="54" y="511" class="cmd"><tspan class="kw">SELECT MIN</tspan><tspan>(col) </tspan><tspan class="kw">FROM</tspan><tspan> table</tspan></text>
+  <text x="54" y="527" class="desc">Returns the smallest value of the selected column.</text>
+
+  <rect x="450" y="492" width="410" height="58" rx="2" class="card"/>
+  <rect x="450" y="492" width="3" height="58" rx="1" fill="url(#goldAccent)"/>
+  <rect x="450" y="492" width="410" height="58" rx="2" class="card-border"/>
+  <text x="464" y="511" class="cmd"><tspan class="kw">SELECT MAX</tspan><tspan>(col) </tspan><tspan class="kw">FROM</tspan><tspan> table</tspan></text>
+  <text x="464" y="527" class="desc">Returns the largest value of the selected column.</text>
+
+  <!-- Row 6 -->
+  <rect x="40" y="560" width="390" height="68" rx="2" class="card"/>
+  <rect x="40" y="560" width="3" height="68" rx="1" fill="url(#goldAccent)"/>
+  <rect x="40" y="560" width="390" height="68" rx="2" class="card-border"/>
+  <text x="54" y="579" class="cmd"><tspan class="kw">SELECT</tspan><tspan> col </tspan><tspan class="kw">FROM</tspan><tspan> t </tspan><tspan class="kw">GROUP BY</tspan><tspan> col</tspan></text>
+  <text x="54" y="594" class="cmd"><tspan class="kw">HAVING</tspan><tspan class="str"> condition</tspan></text>
+  <text x="54" y="614" class="desc">Groups rows with same values; filtered by HAVING.</text>
+
+  <rect x="450" y="560" width="410" height="68" rx="2" class="card"/>
+  <rect x="450" y="560" width="3" height="68" rx="1" fill="url(#goldAccent)"/>
+  <rect x="450" y="560" width="410" height="68" rx="2" class="card-border"/>
+  <text x="464" y="579" class="cmd"><tspan class="kw">SELECT</tspan><tspan> * </tspan><tspan class="kw">FROM</tspan><tspan> t </tspan><tspan class="kw">LIMIT</tspan><tspan> n</tspan></text>
+  <text x="464" y="614" class="desc">Limits number of records returned. (Syntax varies by DB)</text>
+
+  <!-- ══ DDL SECTION ══ -->
+  <text x="40" y="666" class="section-heading">DATA DEFINITION LANGUAGE (DDL)</text>
+  <line x1="40" y1="674" x2="860" y2="674" class="divider-accent"/>
+
+  <!-- Row 1 -->
+  <rect x="40" y="684" width="390" height="58" rx="2" class="card"/>
+  <rect x="40" y="684" width="3" height="58" rx="1" fill="url(#goldAccent)"/>
+  <rect x="40" y="684" width="390" height="58" rx="2" class="card-border"/>
+  <text x="54" y="703" class="cmd"><tspan class="kw">CREATE DATABASE</tspan><tspan> db_name</tspan></text>
+  <text x="54" y="719" class="desc">Creates a new SQL database.</text>
+
+  <rect x="450" y="684" width="410" height="58" rx="2" class="card"/>
+  <rect x="450" y="684" width="3" height="58" rx="1" fill="url(#goldAccent)"/>
+  <rect x="450" y="684" width="410" height="58" rx="2" class="card-border"/>
+  <text x="464" y="703" class="cmd"><tspan class="kw">CREATE TABLE</tspan><tspan> t (col1 type, ...)</tspan></text>
+  <text x="464" y="719" class="desc">Creates a new table in a database.</text>
+
+  <!-- Row 2 -->
+  <rect x="40" y="752" width="390" height="58" rx="2" class="card"/>
+  <rect x="40" y="752" width="3" height="58" rx="1" fill="url(#goldAccent)"/>
+  <rect x="40" y="752" width="390" height="58" rx="2" class="card-border"/>
+  <text x="54" y="771" class="cmd"><tspan class="kw">ALTER TABLE</tspan><tspan> t </tspan><tspan class="kw">ADD</tspan><tspan> col type</tspan></text>
+  <text x="54" y="787" class="desc">Adds a new column to an existing table.</text>
+
+  <rect x="450" y="752" width="410" height="58" rx="2" class="card"/>
+  <rect x="450" y="752" width="3" height="58" rx="1" fill="url(#goldAccent)"/>
+  <rect x="450" y="752" width="410" height="58" rx="2" class="card-border"/>
+  <text x="464" y="771" class="cmd"><tspan class="kw">ALTER TABLE</tspan><tspan> t </tspan><tspan class="kw">DROP COLUMN</tspan><tspan> col</tspan></text>
+  <text x="464" y="787" class="desc">Deletes a column from an existing table.</text>
+
+  <!-- Row 3 -->
+  <rect x="40" y="820" width="390" height="58" rx="2" class="card"/>
+  <rect x="40" y="820" width="3" height="58" rx="1" fill="url(#goldAccent)"/>
+  <rect x="40" y="820" width="390" height="58" rx="2" class="card-border"/>
+  <text x="54" y="839" class="cmd"><tspan class="kw">DROP TABLE</tspan><tspan> table_name</tspan></text>
+  <text x="54" y="855" class="desc">Deletes an existing table.</text>
+
+  <rect x="450" y="820" width="410" height="58" rx="2" class="card"/>
+  <rect x="450" y="820" width="3" height="58" rx="1" fill="url(#goldAccent)"/>
+  <rect x="450" y="820" width="410" height="58" rx="2" class="card-border"/>
+  <text x="464" y="839" class="cmd"><tspan class="kw">DROP DATABASE</tspan><tspan> db_name</tspan></text>
+  <text x="464" y="855" class="desc">Deletes an existing database.</text>
+
+  <!-- ══ DML SECTION ══ -->
+  <text x="40" y="910" class="section-heading">DATA MANIPULATION LANGUAGE (DML)</text>
+  <line x1="40" y1="918" x2="860" y2="918" class="divider-accent"/>
+
+  <!-- Row 1 -->
+  <rect x="40" y="928" width="390" height="68" rx="2" class="card"/>
+  <rect x="40" y="928" width="3" height="68" rx="1" fill="url(#goldAccent)"/>
+  <rect x="40" y="928" width="390" height="68" rx="2" class="card-border"/>
+  <text x="54" y="947" class="cmd"><tspan class="kw">INSERT INTO</tspan><tspan> t (c1, c2)</tspan></text>
+  <text x="54" y="962" class="cmd"><tspan class="kw">VALUES </tspan><tspan>(</tspan><tspan class="str">val1</tspan><tspan>, </tspan><tspan class="str">val2</tspan><tspan>)</tspan></text>
+  <text x="54" y="982" class="desc">Inserts new records into a table.</text>
+
+  <rect x="450" y="928" width="410" height="68" rx="2" class="card"/>
+  <rect x="450" y="928" width="3" height="68" rx="1" fill="url(#goldAccent)"/>
+  <rect x="450" y="928" width="410" height="68" rx="2" class="card-border"/>
+  <text x="464" y="947" class="cmd"><tspan class="kw">UPDATE</tspan><tspan> t </tspan><tspan class="kw">SET</tspan><tspan> col = val</tspan></text>
+  <text x="464" y="962" class="cmd"><tspan class="kw">WHERE</tspan><tspan class="str"> condition</tspan></text>
+  <text x="464" y="982" class="desc">Modifies existing records in a table.</text>
+
+  <!-- Row 2 -->
+  <rect x="40" y="1006" width="390" height="58" rx="2" class="card"/>
+  <rect x="40" y="1006" width="3" height="58" rx="1" fill="url(#goldAccent)"/>
+  <rect x="40" y="1006" width="390" height="58" rx="2" class="card-border"/>
+  <text x="54" y="1025" class="cmd"><tspan class="kw">DELETE FROM</tspan><tspan> t </tspan><tspan class="kw">WHERE</tspan><tspan> cond</tspan></text>
+  <text x="54" y="1041" class="desc">Deletes existing records from a table.</text>
+
+  <!-- ══ JOINS SECTION ══ -->
+  <text x="40" y="1096" class="section-heading">JOINS</text>
+  <line x1="40" y1="1104" x2="860" y2="1104" class="divider-accent"/>
+
+  <!-- Row 1 -->
+  <rect x="40" y="1114" width="390" height="58" rx="2" class="card"/>
+  <rect x="40" y="1114" width="3" height="58" rx="1" fill="url(#goldAccent)"/>
+  <rect x="40" y="1114" width="390" height="58" rx="2" class="card-border"/>
+  <text x="54" y="1133" class="cmd"><tspan class="kw">INNER JOIN</tspan></text>
+  <text x="54" y="1149" class="desc">Returns records matching values in both tables.</text>
+
+  <rect x="450" y="1114" width="410" height="58" rx="2" class="card"/>
+  <rect x="450" y="1114" width="3" height="58" rx="1" fill="url(#goldAccent)"/>
+  <rect x="450" y="1114" width="410" height="58" rx="2" class="card-border"/>
+  <text x="464" y="1133" class="cmd"><tspan class="kw">LEFT JOIN</tspan><tspan> (LEFT OUTER JOIN)</tspan></text>
+  <text x="464" y="1149" class="desc">All left table rows + matched right table rows.</text>
+
+  <!-- Row 2 -->
+  <rect x="40" y="1182" width="390" height="58" rx="2" class="card"/>
+  <rect x="40" y="1182" width="3" height="58" rx="1" fill="url(#goldAccent)"/>
+  <rect x="40" y="1182" width="390" height="58" rx="2" class="card-border"/>
+  <text x="54" y="1201" class="cmd"><tspan class="kw">RIGHT JOIN</tspan><tspan> (RIGHT OUTER JOIN)</tspan></text>
+  <text x="54" y="1217" class="desc">All right table rows + matched left table rows.</text>
+
+  <rect x="450" y="1182" width="410" height="58" rx="2" class="card"/>
+  <rect x="450" y="1182" width="3" height="58" rx="1" fill="url(#goldAccent)"/>
+  <rect x="450" y="1182" width="410" height="58" rx="2" class="card-border"/>
+  <text x="464" y="1201" class="cmd"><tspan class="kw">FULL JOIN</tspan><tspan> (FULL OUTER JOIN)</tspan></text>
+  <text x="464" y="1217" class="desc">Returns all records when there is a match in either table.</text>
+
+  <!-- Row 3 — INNER JOIN example full width -->
+  <rect x="40" y="1250" width="820" height="82" rx="2" class="card"/>
+  <rect x="40" y="1250" width="3" height="82" rx="1" fill="#DD7596"/>
+  <rect x="40" y="1250" width="820" height="82" rx="2" class="card-border"/>
+  <text x="54" y="1269" class="cmd"><tspan class="kw">SELECT</tspan><tspan> Orders.OrderID, Customers.CustomerName </tspan><tspan class="kw">FROM</tspan><tspan> Orders</tspan></text>
+  <text x="54" y="1284" class="cmd"><tspan class="kw">INNER JOIN</tspan><tspan> Customers </tspan><tspan class="kw">ON</tspan><tspan> Orders.CustomerID = Customers.CustomerID</tspan></text>
+  <text x="54" y="1316" class="desc">Example of an INNER JOIN.</text>
+
+  <!-- Footer separator -->
+  <line x1="40" y1="1365" x2="860" y2="1365" class="divider"/>
+  <rect x="40" y="1365" width="820" height="1" fill="url(#multiLine)" opacity="0.5"/>
+
+  <!-- Footer logo mark small -->
+  <g transform="translate(40, 1378) scale(0.3)">
+    <rect x="8" y="8" width="70" height="70" rx="4" fill="#2A343F"/>
+    <rect x="18" y="18" width="9" height="50" fill="#B7C3F3"/>
+    <rect x="18" y="18" width="50" height="9" fill="#B7C3F3"/>
+    <rect x="18" y="38" width="37" height="7" fill="#ECDA90"/>
+    <polygon points="59,18 68,18 68,27" fill="#DD7596"/>
+    <polygon points="59,18 68,27 59,27" fill="#2A343F"/>
+    <rect x="71" y="76" width="7" height="2" fill="#DD7596"/>
+    <rect x="75" y="72" width="2" height="6" fill="#DD7596"/>
+  </g>
+
+  <text x="70" y="1397" class="footer">FYNES FORGE · SQL CHEAT SHEET</text>
+  <text x="860" y="1397" text-anchor="end" class="footer">Created by Tom Fynes · fynes-forge</text>
+</svg>

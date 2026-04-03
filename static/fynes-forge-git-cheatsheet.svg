@@ -1,0 +1,261 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1620" width="900" height="1620">
+  <defs>
+    <style>
+      .bg        { fill: #252E36; }
+      .card      { fill: #1C2329; }
+      .card-border { fill: none; stroke: #4F6272; stroke-width: 0.5; opacity: 0.4; }
+      .title     { font-family: 'Cinzel', serif; font-weight: 900; font-size: 36px; fill: #B7C3F3; letter-spacing: 0.1em; }
+      .subtitle  { font-family: 'JetBrains Mono', monospace; font-size: 11px; fill: #4F6272; letter-spacing: 0.4em; }
+      .section-heading { font-family: 'Cinzel', serif; font-weight: 700; font-size: 13px; fill: #DD7596; letter-spacing: 0.15em; }
+      .divider   { stroke: #4F6272; stroke-width: 0.5; opacity: 0.4; }
+      .divider-accent { stroke: #ECDA90; stroke-width: 1; opacity: 0.5; }
+      .cmd       { font-family: 'JetBrains Mono', monospace; font-size: 10.5px; fill: #63C5EA; }
+      .desc      { font-family: 'Rajdhani', sans-serif; font-size: 12px; fill: #B7C3F3; letter-spacing: 0.03em; }
+      .kw        { fill: #DD7596; }
+      .fn        { fill: #63C5EA; }
+      .str       { fill: #83AFDF; }
+      .gold      { fill: #ECDA90; }
+      .footer    { font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #4F6272; letter-spacing: 0.2em; }
+    </style>
+    <linearGradient id="goldAccentG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ECDA90" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ECDA90" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="multiLineG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#D05786"/>
+      <stop offset="50%" stop-color="#63C5EA"/>
+      <stop offset="100%" stop-color="#9F7EBE"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="1620" class="bg"/>
+  <rect x="0" y="0" width="900" height="3" fill="url(#multiLineG)"/>
+
+  <!-- Logo mark -->
+  <g transform="translate(40, 26) scale(0.52)">
+    <rect x="8" y="8" width="70" height="70" rx="4" fill="#2A343F"/>
+    <rect x="18" y="18" width="9" height="50" fill="#B7C3F3"/>
+    <rect x="18" y="18" width="50" height="9" fill="#B7C3F3"/>
+    <rect x="18" y="38" width="37" height="7" fill="#ECDA90"/>
+    <polygon points="59,18 68,18 68,27" fill="#DD7596"/>
+    <polygon points="59,18 68,27 59,27" fill="#2A343F"/>
+    <rect x="18" y="68" width="50" height="2" fill="#63C5EA" opacity="0.55"/>
+    <rect x="66" y="29" width="2" height="39" fill="#9F7EBE" opacity="0.45"/>
+    <rect x="8"  y="8"  width="7" height="2" fill="#ECDA90"/>
+    <rect x="8"  y="8"  width="2" height="7" fill="#ECDA90"/>
+    <rect x="71" y="76" width="7" height="2" fill="#DD7596"/>
+    <rect x="75" y="72" width="2" height="6" fill="#DD7596"/>
+  </g>
+  <text x="84" y="51" font-family="Cinzel, serif" font-weight="900" font-size="16" fill="#B7C3F3" letter-spacing="4">FYNES</text>
+  <text x="84" y="63" font-family="Cinzel, serif" font-weight="400" font-size="7" fill="#ECDA90" letter-spacing="6">FORGE</text>
+  <line x1="40" y1="80" x2="860" y2="80" stroke="#4F6272" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Title -->
+  <text x="450" y="130" text-anchor="middle" class="title">GIT</text>
+  <text x="450" y="152" text-anchor="middle" class="subtitle">CHEAT SHEET</text>
+  <line x1="180" y1="166" x2="370" y2="166" stroke="#4F6272" stroke-width="0.5" opacity="0.4"/>
+  <rect x="371" y="163" width="158" height="2" fill="#ECDA90" opacity="0.4"/>
+  <line x1="530" y1="166" x2="720" y2="166" stroke="#4F6272" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- ══ BASIC COMMANDS ══ -->
+  <text x="40" y="202" class="section-heading">BASIC COMMANDS</text>
+  <line x1="40" y1="210" x2="860" y2="210" stroke="#ECDA90" stroke-width="1" opacity="0.5"/>
+
+  <!-- git init -->
+  <rect x="40" y="220" width="390" height="58" rx="2" class="card"/>
+  <rect x="40" y="220" width="3" height="58" rx="1" fill="url(#goldAccentG)"/>
+  <rect x="40" y="220" width="390" height="58" rx="2" class="card-border"/>
+  <text x="54" y="239" class="cmd"><tspan class="kw">git</tspan><tspan> init</tspan></text>
+  <text x="54" y="255" class="desc">Initializes a new Git repository in the current directory.</text>
+
+  <!-- git clone -->
+  <rect x="450" y="220" width="410" height="58" rx="2" class="card"/>
+  <rect x="450" y="220" width="3" height="58" rx="1" fill="url(#goldAccentG)"/>
+  <rect x="450" y="220" width="410" height="58" rx="2" class="card-border"/>
+  <text x="464" y="239" class="cmd"><tspan class="kw">git</tspan><tspan> clone </tspan><tspan class="str">[url]</tspan></text>
+  <text x="464" y="255" class="desc">Creates a local copy of a remote repository.</text>
+
+  <!-- git status -->
+  <rect x="40" y="288" width="390" height="58" rx="2" class="card"/>
+  <rect x="40" y="288" width="3" height="58" rx="1" fill="url(#goldAccentG)"/>
+  <rect x="40" y="288" width="390" height="58" rx="2" class="card-border"/>
+  <text x="54" y="307" class="cmd"><tspan class="kw">git</tspan><tspan> status</tspan></text>
+  <text x="54" y="323" class="desc">Displays the status of your working directory and staging area.</text>
+
+  <!-- git add file -->
+  <rect x="450" y="288" width="410" height="58" rx="2" class="card"/>
+  <rect x="450" y="288" width="3" height="58" rx="1" fill="url(#goldAccentG)"/>
+  <rect x="450" y="288" width="410" height="58" rx="2" class="card-border"/>
+  <text x="464" y="307" class="cmd"><tspan class="kw">git</tspan><tspan> add </tspan><tspan class="str">[file]</tspan></text>
+  <text x="464" y="323" class="desc">Adds a specific file to the staging area.</text>
+
+  <!-- git add . -->
+  <rect x="40" y="356" width="390" height="58" rx="2" class="card"/>
+  <rect x="40" y="356" width="3" height="58" rx="1" fill="url(#goldAccentG)"/>
+  <rect x="40" y="356" width="390" height="58" rx="2" class="card-border"/>
+  <text x="54" y="375" class="cmd"><tspan class="kw">git</tspan><tspan> add .</tspan></text>
+  <text x="54" y="391" class="desc">Stages all changes (new and modified files) in the current dir.</text>
+
+  <!-- git commit -->
+  <rect x="450" y="356" width="410" height="58" rx="2" class="card"/>
+  <rect x="450" y="356" width="3" height="58" rx="1" fill="url(#goldAccentG)"/>
+  <rect x="450" y="356" width="410" height="58" rx="2" class="card-border"/>
+  <text x="464" y="375" class="cmd"><tspan class="kw">git</tspan><tspan> commit -m </tspan><tspan class="str">"message"</tspan></text>
+  <text x="464" y="391" class="desc">Records staged changes with a descriptive message.</text>
+
+  <!-- git log -->
+  <rect x="40" y="424" width="390" height="58" rx="2" class="card"/>
+  <rect x="40" y="424" width="3" height="58" rx="1" fill="url(#goldAccentG)"/>
+  <rect x="40" y="424" width="390" height="58" rx="2" class="card-border"/>
+  <text x="54" y="443" class="cmd"><tspan class="kw">git</tspan><tspan> log</tspan></text>
+  <text x="54" y="459" class="desc">Shows the commit history.</text>
+
+  <!-- git diff -->
+  <rect x="450" y="424" width="410" height="58" rx="2" class="card"/>
+  <rect x="450" y="424" width="3" height="58" rx="1" fill="url(#goldAccentG)"/>
+  <rect x="450" y="424" width="410" height="58" rx="2" class="card-border"/>
+  <text x="464" y="443" class="cmd"><tspan class="kw">git</tspan><tspan> diff</tspan></text>
+  <text x="464" y="459" class="desc">Shows changes between commits, commit and working tree, etc.</text>
+
+  <!-- ══ BRANCHING & MERGING ══ -->
+  <text x="40" y="514" class="section-heading">BRANCHING &amp; MERGING</text>
+  <line x1="40" y1="522" x2="860" y2="522" stroke="#ECDA90" stroke-width="1" opacity="0.5"/>
+
+  <rect x="40" y="532" width="390" height="58" rx="2" class="card"/>
+  <rect x="40" y="532" width="3" height="58" rx="1" fill="url(#goldAccentG)"/>
+  <rect x="40" y="532" width="390" height="58" rx="2" class="card-border"/>
+  <text x="54" y="551" class="cmd"><tspan class="kw">git</tspan><tspan> branch</tspan></text>
+  <text x="54" y="567" class="desc">Lists all local branches.</text>
+
+  <rect x="450" y="532" width="410" height="58" rx="2" class="card"/>
+  <rect x="450" y="532" width="3" height="58" rx="1" fill="url(#goldAccentG)"/>
+  <rect x="450" y="532" width="410" height="58" rx="2" class="card-border"/>
+  <text x="464" y="551" class="cmd"><tspan class="kw">git</tspan><tspan> branch </tspan><tspan class="str">[branch-name]</tspan></text>
+  <text x="464" y="567" class="desc">Creates a new branch.</text>
+
+  <rect x="40" y="600" width="390" height="58" rx="2" class="card"/>
+  <rect x="40" y="600" width="3" height="58" rx="1" fill="url(#goldAccentG)"/>
+  <rect x="40" y="600" width="390" height="58" rx="2" class="card-border"/>
+  <text x="54" y="619" class="cmd"><tspan class="kw">git</tspan><tspan> checkout </tspan><tspan class="str">[branch]</tspan></text>
+  <text x="54" y="635" class="desc">Switches to a different branch.</text>
+
+  <rect x="450" y="600" width="410" height="58" rx="2" class="card"/>
+  <rect x="450" y="600" width="3" height="58" rx="1" fill="url(#goldAccentG)"/>
+  <rect x="450" y="600" width="410" height="58" rx="2" class="card-border"/>
+  <text x="464" y="619" class="cmd"><tspan class="kw">git</tspan><tspan> merge </tspan><tspan class="str">[branch-name]</tspan></text>
+  <text x="464" y="635" class="desc">Integrates changes from a specified branch into current branch.</text>
+
+  <rect x="40" y="668" width="390" height="58" rx="2" class="card"/>
+  <rect x="40" y="668" width="3" height="58" rx="1" fill="url(#goldAccentG)"/>
+  <rect x="40" y="668" width="390" height="58" rx="2" class="card-border"/>
+  <text x="54" y="687" class="cmd"><tspan class="kw">git</tspan><tspan> branch -d </tspan><tspan class="str">[branch]</tspan></text>
+  <text x="54" y="703" class="desc">Deletes a specified branch (only if merged).</text>
+
+  <rect x="450" y="668" width="410" height="58" rx="2" class="card"/>
+  <rect x="450" y="668" width="3" height="58" rx="1" fill="url(#goldAccentG)"/>
+  <rect x="450" y="668" width="410" height="58" rx="2" class="card-border"/>
+  <text x="464" y="687" class="cmd"><tspan class="kw">git</tspan><tspan> push -u origin </tspan><tspan class="str">[branch]</tspan></text>
+  <text x="464" y="703" class="desc">Pushes a new branch to remote and sets it upstream.</text>
+
+  <!-- ══ REMOTE OPERATIONS ══ -->
+  <text x="40" y="758" class="section-heading">REMOTE OPERATIONS</text>
+  <line x1="40" y1="766" x2="860" y2="766" stroke="#ECDA90" stroke-width="1" opacity="0.5"/>
+
+  <rect x="40" y="776" width="390" height="58" rx="2" class="card"/>
+  <rect x="40" y="776" width="3" height="58" rx="1" fill="url(#goldAccentG)"/>
+  <rect x="40" y="776" width="390" height="58" rx="2" class="card-border"/>
+  <text x="54" y="795" class="cmd"><tspan class="kw">git</tspan><tspan> pull</tspan></text>
+  <text x="54" y="811" class="desc">Fetches and integrates changes from remote to current branch.</text>
+
+  <rect x="450" y="776" width="410" height="58" rx="2" class="card"/>
+  <rect x="450" y="776" width="3" height="58" rx="1" fill="url(#goldAccentG)"/>
+  <rect x="450" y="776" width="410" height="58" rx="2" class="card-border"/>
+  <text x="464" y="795" class="cmd"><tspan class="kw">git</tspan><tspan> push</tspan></text>
+  <text x="464" y="811" class="desc">Uploads local branch commits to the remote repository.</text>
+
+  <rect x="40" y="844" width="390" height="58" rx="2" class="card"/>
+  <rect x="40" y="844" width="3" height="58" rx="1" fill="url(#goldAccentG)"/>
+  <rect x="40" y="844" width="390" height="58" rx="2" class="card-border"/>
+  <text x="54" y="863" class="cmd"><tspan class="kw">git</tspan><tspan> remote add origin </tspan><tspan class="str">[url]</tspan></text>
+  <text x="54" y="879" class="desc">Adds a new remote repository.</text>
+
+  <rect x="450" y="844" width="410" height="58" rx="2" class="card"/>
+  <rect x="450" y="844" width="3" height="58" rx="1" fill="url(#goldAccentG)"/>
+  <rect x="450" y="844" width="410" height="58" rx="2" class="card-border"/>
+  <text x="464" y="863" class="cmd"><tspan class="kw">git</tspan><tspan> remote -v</tspan></text>
+  <text x="464" y="879" class="desc">Lists all configured remote repositories.</text>
+
+  <!-- ══ UNDOING CHANGES ══ -->
+  <text x="40" y="934" class="section-heading">UNDOING CHANGES</text>
+  <line x1="40" y1="942" x2="860" y2="942" stroke="#ECDA90" stroke-width="1" opacity="0.5"/>
+
+  <rect x="40" y="952" width="390" height="58" rx="2" class="card"/>
+  <rect x="40" y="952" width="3" height="58" rx="1" fill="url(#goldAccentG)"/>
+  <rect x="40" y="952" width="390" height="58" rx="2" class="card-border"/>
+  <text x="54" y="971" class="cmd"><tspan class="kw">git</tspan><tspan> restore </tspan><tspan class="str">[file]</tspan></text>
+  <text x="54" y="987" class="desc">Unstages changes for a specific file.</text>
+
+  <rect x="450" y="952" width="410" height="58" rx="2" class="card"/>
+  <rect x="450" y="952" width="3" height="58" rx="1" fill="url(#goldAccentG)"/>
+  <rect x="450" y="952" width="410" height="58" rx="2" class="card-border"/>
+  <text x="464" y="971" class="cmd"><tspan class="kw">git</tspan><tspan> restore .</tspan></text>
+  <text x="464" y="987" class="desc">Discards all unstaged changes in the working directory.</text>
+
+  <rect x="40" y="1020" width="390" height="58" rx="2" class="card"/>
+  <rect x="40" y="1020" width="3" height="58" rx="1" fill="url(#goldAccentG)"/>
+  <rect x="40" y="1020" width="390" height="58" rx="2" class="card-border"/>
+  <text x="54" y="1039" class="cmd"><tspan class="kw">git</tspan><tspan> revert </tspan><tspan class="str">[commit]</tspan></text>
+  <text x="54" y="1055" class="desc">Undoes a commit by creating a new reverting commit.</text>
+
+  <rect x="450" y="1020" width="410" height="58" rx="2" class="card"/>
+  <rect x="450" y="1020" width="3" height="58" rx="1" fill="url(#goldAccentG)"/>
+  <rect x="450" y="1020" width="410" height="58" rx="2" class="card-border"/>
+  <text x="464" y="1039" class="cmd"><tspan class="kw">git</tspan><tspan> reset --hard </tspan><tspan class="str">[commit]</tspan></text>
+  <text x="464" y="1055" class="desc">Resets branch to a specific commit, discarding all subsequent.</text>
+
+  <!-- ══ STASHING ══ -->
+  <text x="40" y="1110" class="section-heading">STASHING</text>
+  <line x1="40" y1="1118" x2="860" y2="1118" stroke="#ECDA90" stroke-width="1" opacity="0.5"/>
+
+  <rect x="40" y="1128" width="390" height="58" rx="2" class="card"/>
+  <rect x="40" y="1128" width="3" height="58" rx="1" fill="url(#goldAccentG)"/>
+  <rect x="40" y="1128" width="390" height="58" rx="2" class="card-border"/>
+  <text x="54" y="1147" class="cmd"><tspan class="kw">git</tspan><tspan> stash</tspan></text>
+  <text x="54" y="1163" class="desc">Temporarily saves changes that are not ready to be committed.</text>
+
+  <rect x="450" y="1128" width="410" height="58" rx="2" class="card"/>
+  <rect x="450" y="1128" width="3" height="58" rx="1" fill="url(#goldAccentG)"/>
+  <rect x="450" y="1128" width="410" height="58" rx="2" class="card-border"/>
+  <text x="464" y="1147" class="cmd"><tspan class="kw">git</tspan><tspan> stash pop</tspan></text>
+  <text x="464" y="1163" class="desc">Reapplies the most recently stashed changes.</text>
+
+  <rect x="40" y="1196" width="390" height="58" rx="2" class="card"/>
+  <rect x="40" y="1196" width="3" height="58" rx="1" fill="url(#goldAccentG)"/>
+  <rect x="40" y="1196" width="390" height="58" rx="2" class="card-border"/>
+  <text x="54" y="1215" class="cmd"><tspan class="kw">git</tspan><tspan> stash list</tspan></text>
+  <text x="54" y="1231" class="desc">Shows a list of all stashed changes.</text>
+
+  <rect x="450" y="1196" width="410" height="58" rx="2" class="card"/>
+  <rect x="450" y="1196" width="3" height="58" rx="1" fill="url(#goldAccentG)"/>
+  <rect x="450" y="1196" width="410" height="58" rx="2" class="card-border"/>
+  <text x="464" y="1215" class="cmd"><tspan class="kw">git</tspan><tspan> stash drop</tspan></text>
+  <text x="464" y="1231" class="desc">Deletes the most recent stash.</text>
+
+  <!-- Footer -->
+  <line x1="40" y1="1280" x2="860" y2="1280" stroke="#4F6272" stroke-width="0.5" opacity="0.4"/>
+  <rect x="40" y="1280" width="820" height="1" fill="url(#multiLineG)" opacity="0.5"/>
+
+  <g transform="translate(40, 1292) scale(0.3)">
+    <rect x="8" y="8" width="70" height="70" rx="4" fill="#2A343F"/>
+    <rect x="18" y="18" width="9" height="50" fill="#B7C3F3"/>
+    <rect x="18" y="18" width="50" height="9" fill="#B7C3F3"/>
+    <rect x="18" y="38" width="37" height="7" fill="#ECDA90"/>
+    <polygon points="59,18 68,18 68,27" fill="#DD7596"/>
+    <polygon points="59,18 68,27 59,27" fill="#2A343F"/>
+    <rect x="71" y="76" width="7" height="2" fill="#DD7596"/>
+    <rect x="75" y="72" width="2" height="6" fill="#DD7596"/>
+  </g>
+  <text x="70" y="1310" class="footer">FYNES FORGE · GIT CHEAT SHEET</text>
+  <text x="860" y="1310" text-anchor="end" class="footer">Created by Tom Fynes · fynes-forge</text>
+</svg>

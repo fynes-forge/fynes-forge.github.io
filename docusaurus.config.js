@@ -171,14 +171,17 @@ const config = {
             },
             {
               label: "Git Cheat Sheet",
-              // Use 'href' for static assets and add the leading slash
-              href: "/downloads/cheatsheet.jpg",
-              target: "_blank",
+              href: "pathname:///fynes-forge-git-cheatsheet.pdf",
+              attributes: {
+                download: true,
+              },
             },
             {
               label: "SQL Cheat Sheet",
-              href: "/downloads/sql_cheatsheet.jpg",
-              target: "_blank",
+              href: "pathname:///fynes-forge-sql-cheatsheet.pdf",
+              attributes: {
+                download: true,
+              },
             },
           ],
         },
