@@ -223,7 +223,7 @@ const config = {
         {
           title: "Contact",
           items: [
-            { label: "tf.dev@icloud.com", to: "mailto:tf.dev@icloud.com" },
+            { label: "contact@fynesforge.dev", to: "mailto:contact@fynesforge.dev" },
           ],
         },
       ],
