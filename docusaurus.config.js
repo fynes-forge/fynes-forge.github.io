@@ -10,7 +10,7 @@ const config = {
   url: "https://fynes-forge.github.io",
   baseUrl: "/",
   organizationName: "fynes-forge",
-  projectName: "fynes-forge.github.io",
+  projectName: "fynesforge.dev",
   trailingSlash: false,
 
   onBrokenLinks: "throw",
