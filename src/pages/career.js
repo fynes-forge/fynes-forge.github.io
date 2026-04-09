@@ -19,7 +19,7 @@ const ACCENT = "#DD7596";
 const PERIWINKLE = "#B7C3F3";
 const PALE_BLUE = "#AED6F1";
 const MAGENTA = "#ECDA90";
-const CONTACT_EMAIL = "tf.dev@icloud.com";
+const CONTACT_EMAIL = "contact@fynesforge.dev";
 
 // ─── Data ──────────────────────────────────────────────────────────────────────
 

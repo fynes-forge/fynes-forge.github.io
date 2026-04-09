@@ -29,13 +29,13 @@ git log
 Output:
 ```yaml
 commit a3f6f1c9e29a3e82a4dcb3f59e8ab3d28a12c9af
-Author: Tom Fynes <tf.dev@icloud.com.com>
+Author: Tom Fynes <tom@fynesforge.dev>
 Date:   Fri May 24 14:15 2025
 
     Add styling to navigation bar
 
 commit d1e8f91b45e8e1f9e4aa84b2e1830c4b5d674cd0
-Author: Tom Fynes <tf.dev@icloud.com.com>
+Author: Tom Fynes <tom@fynesforge.dev>
 Date:   Fri May 24 13:50 2025
 
     Initial commit: add version.txt
