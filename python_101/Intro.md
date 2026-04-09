@@ -91,5 +91,5 @@ Grades have been added to help break your journey into helpful sections. Each se
 
 In this section we will cover library-specific topics that are widely used in data roles. These are optional extensions — go as deep as you like.
 
-* [**Pandas**](/python_101/Grade%209-extras/Pandas/01%20Pandas.md: Tabular data manipulation with DataFrames.
+* [**Pandas**](/python_101/Grade%209-extras/Pandas/01%20Pandas.md): Tabular data manipulation with DataFrames.
 * [**Polars**](/python_101/Grade%209-extras/Polars/01%20Polars.md): A fast, modern alternative to Pandas.
