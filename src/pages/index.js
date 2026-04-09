@@ -189,7 +189,7 @@ export function HomepageHeader() {
             </motion.a>
 
             <motion.a
-              href="mailto:tom.fynes@icloud.com"
+              href="mailto:contact@fynesforge.dev"
               className="px-7 py-3 rounded-xl font-bold text-base inline-block"
               style={{
                 color: "#DD7596",
@@ -437,7 +437,7 @@ function FinalCTA() {
           </motion.a>
 
           <motion.a
-            href="mailto:tf.dev@icloud.com"
+            href="mailto:contact@fynesforge.dev"
             className="px-8 py-3 rounded-xl font-bold text-base inline-block"
             style={{
               color: "#DD7596",
