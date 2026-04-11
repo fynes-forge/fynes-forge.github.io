@@ -22,7 +22,7 @@ You may also use any other database engine you feel comfortable with however the
 
 ## Setup
 
-To participate please fork the [repo](https://github.com/Tom-Fynes/sql-101) and follow one of the setup documents. please save your queries [here](https://github.com/Tom-Fynes/sql-101/tree/main/Exercises). Also while going through the course if you find an issue or think of an improvement please log an issue [here](https://github.com/Tom-Fynes/sql-101/issues)
+To participate please fork the [repo](https://github.com/fynes-forge/sql-101) and follow one of the setup documents. please save your queries [here](https://github.com/fynes-forge/sql-101/tree/main/Exercises). Also while going through the course if you find an issue or think of an improvement please log an issue [here](https://github.com/fynes-forge/sql-101/issues)
 
 * [DuckDB](/docs/Getting%20Started/Duckdb)
 * [SQL Server](/docs/Getting%20Started/SQL%20Server)
