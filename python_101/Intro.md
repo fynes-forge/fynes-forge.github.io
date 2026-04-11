@@ -21,7 +21,7 @@ You may also use any other editor or IDE you feel comfortable with, such as PyCh
 
 ## Setup
 
-To participate please fork the [repo](https://github.com/Tom-Fynes/python-101) and follow one of the setup documents. Please save your exercises [here](https://github.com/Tom-Fynes/python-101/tree/main/exercises). Also while going through the course if you find an issue or think of an improvement please log an issue [here](https://github.com/Tom-Fynes/python-101/issues).
+To participate please fork the [repo](https://github.com/fynes-forge/python-101) and follow one of the setup documents. Please save your exercises [here](https://github.com/fynes-forge/python-101/tree/main/exercises). Also while going through the course if you find an issue or think of an improvement please log an issue [here](https://github.com/fynes-forge/python-101/issues).
 
 * [Windows](/python_101/Getting%20Started/Windows)
 * [macOS](/python_101/Getting%20Started/macOS)
