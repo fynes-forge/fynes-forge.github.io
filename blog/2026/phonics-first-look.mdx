@@ -1,0 +1,38 @@
+---
+slug: phonics-journey-first-look
+title: "First Look: Phonics Journey Running on Android"
+authors: [tomfynes]
+date: 2026-05-17
+tags: [flutter, dart, mobile-dev, phonics-journey]
+---
+
+Last week I wrote about building Phonics Journey. A lot of people asked to see what it actually looks like.
+
+Here it is.
+
+<!-- truncate -->
+
+<video controls style={{width: '100%', maxWidth: '360px', display: 'block', margin: '0 auto'}}>
+  <source src="/video/phonics-journey-demo.mp4" type="video/mp4"/>
+</video>
+
+---
+
+A few things worth pointing out that aren't obvious from watching:
+
+**The planet map covers all 100 levels.** Every locked planet stays locked until the child achieves 100% on the level before it — no skipping ahead. The winding path mirrors the Little Wandle progression from Phase 2 through Phase 5, featuring a **rocket** that zips along the trail to show exactly where the child is on their journey.
+
+**The letter tiles are drag-and-drop.** Tap a tile to auto-place it, drag it to a specific slot, or tap a filled slot to return it. The distractor letters mixed into the tray increase as the phases progress — Phase 2 has two wrong letters in the mix, Phase 5 has four.
+
+**"Tap to hear · Hold to peek"** — tapping plays the word via TTS. Long-pressing shows a large emoji representation of the word as a hint. `sat` shows 🪑, `frog` shows 🐸. It works entirely offline, adds nothing to the bundle size, and falls back to ✨ rather than crashing if a word isn't mapped.
+
+**A permanent Star Bank sits at the top of the screen.** This tracks the child's cumulative achievements across the entire game, turning those hard-earned 1, 2, and 3-star level finishes into a tangible, growing collection they can feel proud of.
+
+**Parent settings are one tap away via the cog in the top right.** To keep little fingers out of the menus, it's protected by a secure **parental gate** (requiring a quick adult-only calculation or action to pass). From there, parents can record their own voice for any phoneme — replacing the TTS for that sound throughout the app. This is incredibly useful if the system TTS is mispronouncing a tricky phoneme, or if you just want the child to hear a familiar, comforting voice.
+
+
+The 2-star result at the end is real. I didn't fake a perfect run.
+
+---
+
+Coming to Android and iOS. Repo at [fynes-forge/phonics-journey](https://github.com/fynes-forge/phonics-journey).
