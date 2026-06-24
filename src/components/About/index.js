@@ -66,9 +66,31 @@ export default function AboutMe() {
           </p>
 
           <p className="text-lg">
-            Outside of work, you'll find me tinkering with side projects,
-            learning new tech, and probably obsessing over a new productivity
-            tool. 😅
+            To bridge the gap between experimental tinkering and production-ready code, 
+            I group my public tools and educational resources under{" "}
+            <a 
+              href="https://github.com/fynes-forge" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="font-semibold hover:underline"
+              style={{ color: "#DD7596" }}
+            >
+              Fynes Forge
+            </a>{" "}
+            — an open-source organization built with a scalability-first mindset (
+            <a 
+              href="/blog/why-i-created-fynes-forge" 
+              className="hover:underline italic text-sm"
+              style={{ color: "#B7C3F3" }}
+            >
+              read the philosophy behind it here
+            </a>
+            ).
+          </p>
+
+          <p className="text-lg">
+            Outside of work, you'll find me adding to the Forge, learning new tech, 
+            and probably obsessing over a new productivity tool. 😅
           </p>
         </div>
       </div>
