@@ -2,6 +2,7 @@ import React, { Suspense, useEffect, useRef, useState } from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import AboutMe from "@site/src/components/About";
+import FeaturedWork from "@site/src/components/FeaturedWork"; // <-- Imported new component
 import { Typewriter } from "react-simple-typewriter";
 import {
   motion,
@@ -474,6 +475,11 @@ export default function Home() {
         {/* c) About Me */}
         <FadeInOnScroll direction="up" delay={0}>
           <AboutMe />
+        </FadeInOnScroll>
+
+        {/* NEW: Immediate proof of work cards layout */}
+        <FadeInOnScroll direction="up" delay={0}>
+          <FeaturedWork />
         </FadeInOnScroll>
 
         {/* d) Universe */}
