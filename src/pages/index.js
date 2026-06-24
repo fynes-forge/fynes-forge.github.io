@@ -2,7 +2,7 @@ import React, { Suspense, useEffect, useRef, useState } from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import AboutMe from "@site/src/components/About";
-import FeaturedWork from "@site/src/components/FeaturedWork"; // <-- Imported new component
+import FeaturedWork from "@site/src/components/Featuredk";
 import { Typewriter } from "react-simple-typewriter";
 import {
   motion,
