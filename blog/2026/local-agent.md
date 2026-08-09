@@ -104,5 +104,3 @@ Ollama, Jan, and Cline are all sitting on this MacBook Air right now, and the se
 Which brings me to the thing I'm actually excited about. Phonics Journey — the app I've been [building for my daughter](/blog/data-engineer-builds-an-app) — has a growing pile of feedback and small bugs that are exactly the "contained, well-specified" shape this setup is good at. My next post is going to be about pointing this exact local agent at that repo and seeing how much of that feedback backlog it can clear on its own, entirely offline, while my daughter is testing the app on a tablet with no internet at all.
 
 Watch this space.
-
-Tags: [ollama](/blog/tags/ollama) [jan](/blog/tags/jan) [qwen](/blog/tags/qwen) [local-llm](/blog/tags/local-llm) [vscode](/blog/tags/vscode) [ai](/blog/tags/ai)
