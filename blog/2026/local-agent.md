@@ -1,7 +1,7 @@
 ---
 slug: local-coding-agent-macbook-air-m4
-title: Going Fully Local: A Coding Agent on a MacBook Air M4 with Ollama, Jan, and Qwen2.5-Coder
-authors: [tom]
+title: Going Fully Local! A Coding Agent on a MacBook Air M4 with Ollama, Jan, and Qwen2.5-Coder
+authors: [tomfynes]
 date: 2026-08-09
 tags: [ollama, jan, qwen, local-llm, vscode, ai]
 description: I wanted a coding agent that doesn't phone home. Here's how I got Qwen2.5-Coder:14b running entirely on a 16GB MacBook Air M4, using Ollama and Jan, wired into VS Code as an actual agent.
