@@ -71,7 +71,7 @@ Install Jan, then under **Settings → Model Providers**, add Ollama as an OpenA
 
 ## Step Three: Make It a Coding Agent in VS Code
 
-This is the part that turns a local model from "a novelty" into "something I use daily." Install [Cline](https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev) from the VS Code marketplace, then in its settings choose **Ollama** as the API provider, point the base URL at `http://137.0.0.1:11434`, and select `qwen2.5-coder:14b` from the detected model list. No API key, no account, no request routed anywhere except back to itself.
+This is the part that turns a local model from "a novelty" into "something I use daily." Install [Cline](https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev) from the VS Code marketplace, then in its settings choose **Ollama** as the API provider, point the base URL at `http://127.0.0.1:11434`, and select `qwen2.5-coder:14b` from the detected model list. No API key, no account, no request routed anywhere except back to itself.
 
 Here's the gotcha that cost me an evening: Ollama ships models with a tiny default context window — 2,048 tokens on older builds, 4,096 on newer ones — regardless of what the model can actually handle. Cline is an agent, not a chat box. Its system prompt, file contents, and tool-call history fill that window almost immediately, and once it's full, Ollama silently truncates. The agent doesn't error out. It just starts "forgetting" the task halfway through, which looks a lot like the model being bad when it's actually the plumbing being wrong.
 
