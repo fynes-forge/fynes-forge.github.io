@@ -53,7 +53,7 @@ That's roughly a 9GB download. On the Air M4 with 16GB unified memory, the quant
 Quick sanity check that it's alive:
 
 ```bash
-curl http://localhost:11434/api/generate -d '{
+curl http://127.0.0.1:11434/api/generate -d '{
   "model": "qwen2.5-coder:14b",
   "prompt": "Write a Python function that returns the nth Fibonacci number.",
   "stream": false
@@ -66,11 +66,12 @@ If that returns actual code and not a timeout, Ollama is doing its job.
 
 Jan isn't strictly required to make this work — you could point VS Code straight at Ollama's endpoint and skip it. I keep it in the loop anyway, for the same reason I don't push straight to a production database: I want an interface to poke at the model, check its reasoning, and compare it against other local or remote models before I let it touch a repo.
 
-Install Jan, then under **Settings → Model Providers**, add Ollama as a provider pointing at `http://localhost:11434`. Jan will pick up `qwen2.5-coder:14b` automatically since it's already pulled. From here it behaves like any other chat interface — except every token of it stays on your machine.
+Install Jan, then under **Settings → Model Providers**, add Ollama as an OpenAI-compatible provider pointing at `http://127.0.0.1:11434/v1/`. Set the API key to any placeholder string (like `ollama`) so Jan lets you save the endpoint. It will pick up `qwen2.5-coder:14b` automatically since it's already pulled. From here it behaves like any other chat interface — except every token of it stays on your machine.
+
 
 ## Step Three: Make It a Coding Agent in VS Code
 
-This is the part that turns a local model from "a novelty" into "something I use daily." Install [Cline](https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev) from the VS Code marketplace, then in its settings choose **Ollama** as the API provider, point the base URL at `http://localhost:11434`, and select `qwen2.5-coder:14b` from the detected model list. No API key, no account, no request routed anywhere except back to itself.
+This is the part that turns a local model from "a novelty" into "something I use daily." Install [Cline](https://marketplace.visualstudio.com/items?itemName=saoudrizwan.claude-dev) from the VS Code marketplace, then in its settings choose **Ollama** as the API provider, point the base URL at `http://137.0.0.1:11434`, and select `qwen2.5-coder:14b` from the detected model list. No API key, no account, no request routed anywhere except back to itself.
 
 Here's the gotcha that cost me an evening: Ollama ships models with a tiny default context window — 2,048 tokens on older builds, 4,096 on newer ones — regardless of what the model can actually handle. Cline is an agent, not a chat box. Its system prompt, file contents, and tool-call history fill that window almost immediately, and once it's full, Ollama silently truncates. The agent doesn't error out. It just starts "forgetting" the task halfway through, which looks a lot like the model being bad when it's actually the plumbing being wrong.
 
