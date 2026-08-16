@@ -7,6 +7,8 @@ tags: [ollama, local-llm, observability, duckdb, cline, qwen]
 description: Local models don't send you an invoice, so it's tempting to stop measuring anything. Here's why I log, manage, and visualise token usage anyway — and the ties back to the context-window bug that bit me a few posts ago.
 ---
 
+import dashboardImg from './static/img/ollama-usage-dashboard.png';
+
 Two posts ago I hit a bug where Ollama was silently truncating Cline's context window mid-task, and the agent just started "forgetting" the job rather than erroring out. I fixed it by baking a larger `num_ctx` into a custom Modelfile and moved on.
 
 What I didn't do at the time was ask the more useful question: how would I have caught that *before* it wasted an evening, instead of after? The answer is embarrassingly simple — I wasn't looking at any numbers at all. No cost meter running means it's easy to convince yourself there's nothing to measure. That's backwards. When money isn't the constraint, compute, time, and heat are, and all three trace straight back to token counts.
