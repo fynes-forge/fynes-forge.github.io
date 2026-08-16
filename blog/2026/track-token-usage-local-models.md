@@ -168,7 +168,7 @@ So what does it look like? Here's a screenshot of the dashboard running on my la
 <img
   src="/blog/2026/static/img/ollama-usage-dashboard.png"
   alt="ollama-usage dashboard showing token usage KPIs, a per-tag breakdown table, and tokens-per-second and requests-per-day charts, styled in the Fynes Forge dark theme"
-  style="width:100%; border-radius:4px; border:1px solid rgba(79,98,114,0.3);"
+  style={{width: '100%', borderRadius: '4px', border: '1px solid rgba(79,98,114,0.3)'}}
 />
 
 ## Does This Actually Track Cline?
