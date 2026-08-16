@@ -168,8 +168,8 @@ I did think about wiring this into [Open WebUI](https://github.com/open-webui/op
 So what does it look like? Here's a screenshot of the dashboard running on my laptop, with a few days of Cline traffic logged:
 
 <img
-  src={dashboardImg}
-  alt="ollama-usage dashboard"
+  src="/blog/2026/static/img/ollama-usage-dashboard.png"
+  alt="ollama-usage dashboard showing token usage KPIs, a per-tag breakdown table, and tokens-per-second and requests-per-day charts, styled in the Fynes Forge dark theme"
   style={{width: '100%', borderRadius: '4px', border: '1px solid rgba(79,98,114,0.3)'}}
 />
 
