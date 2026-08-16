@@ -163,6 +163,14 @@ Small bug, and one more reason not to trust a UI change until you've actually in
 
 I did think about wiring this into [Open WebUI](https://github.com/open-webui/open-webui) instead, since it already sits in front of Ollama and shows tokens/s per response but ultimately decided against it.Open WebUI is a chat interface, and I wanted this to stay its own thing.
 
+So what does it look like? Here's a screenshot of the dashboard running on my laptop, with a few days of Cline traffic logged:
+
+<img
+  src="/blog/2026/static/img/ollama-usage-dashboard.png"
+  alt="ollama-usage dashboard showing token usage KPIs, a per-tag breakdown table, and tokens-per-second and requests-per-day charts, styled in the Fynes Forge dark theme"
+  style="width:100%; border-radius:4px; border:1px solid rgba(79,98,114,0.3);"
+/>
+
 ## Does This Actually Track Cline?
 
 No — not with just the `log` command anyway. Cline is a VS Code extension, and it doesn't call `ollama-usage log` when it talks to Ollama. 
@@ -193,7 +201,7 @@ tail -n 1 ~/ollama-usage.jsonl
 
 If that prints a line with `"tag": "cline"`, it's wired up correctly. If nothing new appears, the Base URL change didn't take — double check it against what the proxy printed on startup, not against what you meant to type.
 
-It is also worth noting that currently the poxy has two honest limits:
+It is also worth noting that currently the proxy has two honest limits:
 
 - Everything through one proxy instance shares a single `--tag` (`cline` by default) — the proxy can see the tokens, not the task. If you want `dependabot-review` vs `emoji-fill`-level granularity from Cline specifically, that's a restart-with-a-different-tag-per-session compromise, not something the proxy can infer on its own.
 - Only traffic actually routed through the proxy gets logged. Point Jan or a stray `curl` command at `:11434` directly and it's invisible to this log, same as before. The proxy only sees what's pointed at it.
