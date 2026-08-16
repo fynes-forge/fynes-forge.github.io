@@ -7,6 +7,8 @@ tags: [ollama, local-llm, observability, duckdb, cline, qwen]
 description: Local models don't send you an invoice, so it's tempting to stop measuring anything. Here's why I log, manage, and visualise token usage anyway — and the ties back to the context-window bug that bit me a few posts ago.
 ---
 
+import dashboardImg from './static/img/ollama-usage-dashboard.png';
+
 Two posts ago I hit a bug where Ollama was silently truncating Cline's context window mid-task, and the agent just started "forgetting" the job rather than erroring out. I fixed it by baking a larger `num_ctx` into a custom Modelfile and moved on.
 
 What I didn't do at the time was ask the more useful question: how would I have caught that *before* it wasted an evening, instead of after? The answer is embarrassingly simple — I wasn't looking at any numbers at all. No cost meter running means it's easy to convince yourself there's nothing to measure. That's backwards. When money isn't the constraint, compute, time, and heat are, and all three trace straight back to token counts.
@@ -166,9 +168,9 @@ I did think about wiring this into [Open WebUI](https://github.com/open-webui/op
 So what does it look like? Here's a screenshot of the dashboard running on my laptop, with a few days of Cline traffic logged:
 
 <img
-  src="/blog/2026/static/img/ollama-usage-dashboard.png"
-  alt="ollama-usage dashboard showing token usage KPIs, a per-tag breakdown table, and tokens-per-second and requests-per-day charts, styled in the Fynes Forge dark theme"
-  style="width:100%; border-radius:4px; border:1px solid rgba(79,98,114,0.3);"
+  src={dashboardImg}
+  alt="ollama-usage dashboard"
+  style={{width: '100%', borderRadius: '4px', border: '1px solid rgba(79,98,114,0.3)'}}
 />
 
 ## Does This Actually Track Cline?
