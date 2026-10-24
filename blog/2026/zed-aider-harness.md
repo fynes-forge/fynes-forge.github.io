@@ -2,7 +2,7 @@
 slug: zed-and-aider-workflow
 title: "Less Config, More Context: Zed and Aider as a Lightweight Agent Harness"
 authors: [tom-fynes]
-tags: [ai, local-llm, tooling]
+tags: [ai]
 date: 2026-10-24
 ---
 
