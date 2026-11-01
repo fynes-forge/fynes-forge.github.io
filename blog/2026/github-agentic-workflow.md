@@ -3,7 +3,7 @@ slug: github-agentic-workflows-ga
 title: "Writing Repo Automation in Markdown: A Look at GitHub Agentic Workflows (gh-aw)"
 authors: [tomfynes]
 tags: [ai]
-date: 2026-10-29
+date: 2026-11-01
 ---
 
 GitHub announced general availability of Agentic Workflows (gh-aw) at Universe this year. It's been in preview from GitHub Next for a while, and the idea is simple: you write your repository automation in Markdown, and it compiles down to a normal GitHub Actions workflow.
